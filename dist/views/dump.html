@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		{{> head}}
+	</head>
+	<body>
+		<h1>{{title}}</h1>
+		{{#dumpValues}}
+			host: {{host}}<br/>
+			user-agent: {{user-agent}}<br/>
+			accept: {{accept}}<br/>
+			accept-language: {{accept-language}}<br/>
+			accept-encoding: {{accept-encoding}}<br/>
+			cookie: {{cookie}}<br/>
+			connection: {{connection}}<br/>
+			if-none-match: {{if-none-match}}
+		{{/dumpValues}}
+		<p><a href="/">Back to / route</a></p>
+		<script src="/javascripts/app.js"></script>
+	</body>
+</html>
+
