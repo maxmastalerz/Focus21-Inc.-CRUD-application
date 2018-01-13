@@ -1,76 +1,55 @@
-# Express 4.x boilerplate
+#Challenge accepted:
+====================
 
-## About
+Hi Maksymilian,
 
-This boilerplate is a reconstruction of [yanexbo](https://github.com/atufkas/yanexbo). It is simple in nature and updated to compile under express 4.x
+My name is Collin Doering and I'm the acting CTO here at Focus21. I will be assisting you throughout the interviewing process. Before we bring you in for a final, meet the founders interview however, we ask that you complete the assignment detailed below. This will give us an idea of where you stand as a developer, the rate at which you can learn new technologies and let you showcase your creativity and passion for software development. You are welcome to use whatever libraries, tools, etc.. to facilitate its completion. However, you must meet the minimum requirements specified below. Also feel free to take a look at our stack.
 
-Some changes to yanexbo and extra inclusions:
+Create a notepad SPA (single page application) with a react and redux front-end and a rest API that uses a postgres, mysql, SQLite or Neo4j database to store notes. The project must meet the following requirements:
+Written in es6 (use babel)
+Use webpack for packaging client side code
+expressjs
+node
+npm/yarn
+React
+Redux
+Use postgress, MySQL or SQLite to store notes
+Deploy publicly somewhere (eg. Heroku, AWS ElasticBeanstalk, private server, etc..)
+Implement a ReST note management API with the following specification:
+# Add a note
+POST /note/add
 
-* Uses Express.js 4.x instead of 3.x
-* Uses Hogan.js instead of Jade
-* Example Hogan.js variables & partials
-* Comes with sanitize-html package for simple user input sanitization.
+# Get notes, optionally specifying GET parameters where:
+# limit - indicating the maximum number of notes to get; if unspecified it gets all notes
+# order - specifies what order to sort the notes, based on creation time which can be either "asc" or "desc"; if unspecified, defaults to descending
+# start - specifies where in the sorted notes to begin getting notes; if unspecified, defaults to 1
+# limit - specified the maximum number of notes to get
+GET /note?limit=10&start=1&order=asc
 
-## Installation
+# View a note with a given id
+GET /note/:id
 
-### Clone repository and install dependencies
+# Update a note with a given id
+PUT /note/:id
 
-via git and npm:
+# Delete a note with a given id
+DELETE /note/:id
+Use the ReST API detailed above from your front-end React SPA
+Bonus:
+Use graphql and relay to make requests (note a ReST api must still be provided)
+Use auth0 to provide authentication and restrict users to only being able view, add and create their own notes. This will require modifying the ReST API to allow specifying the user (eg. GET /note/:id becomes GET /:user/note/:id and so on. Additionally there must be an additional route to authenticate the user.
+Allow users to use markdown and show a live preview of the resulting document
+Allow users to download a PDF copy of their note
+Create a react-native application to manage a users notes that uses the note api that was written for this assignment
+Create a native desktop app using your application and elecron
+Use SASS for CSS
+Use CSS animations and transitions to provide a nicer user experience
+Next steps for you:
+Email us back to let us know if you will be completing the assignment and if you have a desire to join the best team in the multiverse!
+If so, please include your estimation for the time it would take you to complete the assignment. (Note: We are not looking for speed here, we are looking for quality and accountability to your chosen time frame.)
+Once you complete the assignment, email us the URL to your repo and URL of release if published.
+Wait for an answer :)
+Looking forward to seeing what you can do!
+Ilya Peskov 
 
-```
-$ git clone https://github.com/maxmastalerz/express4-boilerplate.git
-$ cd express4-boilerplate.git
-$ npm install
-```
-
-### Setup database connection
-
-Database and other environment specific application configuration is meant to be stored in `./config.js`.
-
-```
-...
-development: {
-    db: 'mongodb://localhost:27017/developmentDB'
-}
-...
-```
-
-### Run server
-
-```
-node app.js
-```
-
-Open `http://localhost:3000` for sample page.
-
-## Structure
-
-```
-/public                     Public (static) static files for express http server
-/public/javascripts         Public javascript files
-/public/javascripts/app.js  Sample javascript file (just a wrapper)
-/public/stylesheets         Public stylesheet files
-/public/stylesheets/app.js  Sample stylesheet file (minimalistic)
-/uploads                    Destination for file uploads
-/routes                     Routing modules ("controllers")
-/routes/index.js            Example routing module
-/routes/hello.js            Example routing module
-/views/                     View templates
-/views/partials/head.html   Example hogan partial
-/views/index.html           Example hogan view template
-/views/dump.html            Example hogan view template
-/config.js                  Database and application related configuration
-/express-routes.js          Express routing definitions
-/express-settings.js        Express configuration / settings
-/server.js                  Main file for bootstrapping and starting node http server
-```
-
-## Contribute
-
-Ideas, suggestions and pull requests are welcome.
-
-## License
-
-[The MIT License](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2015 Max Mastalerz &lt;maxmastalerz@hotmail.com&gt;
+CEO
