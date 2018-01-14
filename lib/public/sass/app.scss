@@ -1,0 +1,102 @@
+/* Put your super individual styles here if not generated and included elsewhere */
+
+$lightGreen: #b4f241;
+$lightOrange: #ffdd34;
+
+body {
+	background: url(http://expressjs.com/images/bg.jpg);
+    margin: 80px 40px 80px 80px;
+    padding: 20px;
+    font: 400 14px/1.6 "Open Sans",sans-serif;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #eee;
+	width: 100%;
+	height: 55px;
+	z-index: 100;
+	border-bottom: 1px solid #ddd;
+}
+
+#logo {
+	position: fixed;
+	top: 2px;
+	margin: 0;
+	padding: 10px 25px;
+	width: auto;
+	border-left: none;
+}
+
+	#logo .express {
+		display: block;
+		font: 25px "Helvetica Neue","Open Sans",sans-serif;
+		font-weight: 100;
+		color: #444;
+		text-decoration: none;
+	}
+
+h2 {
+	color: #353535
+}
+
+#col-L {
+	float: left;
+	min-width: 200px;
+	width: calc(30% - 100px);
+}
+
+#col-R {
+	width: calc(70% - 100px);
+	float: left;
+}
+
+.sticky {
+	width: 150px;
+	height: 150px;
+	background-color: #f1f442;
+	float: left;
+	padding: 15px 0px 15px 15px;
+	margin: 5px;
+	overflow: hidden;
+}
+
+	.sticky ._id {
+		width: 30px;
+		height: 80px;
+		text-align: center;
+		float: right;
+		font-weight: bold;
+	}
+
+	.sticky .delete {
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+	}
+
+	.sticky .delete:hover {
+		background-color: $lightOrange;
+	}
+
+	.sticky .edit {
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+	}
+
+	.sticky .edit:hover {
+		background-color: $lightGreen;
+	}
+
+	.sticky .text {
+		height: 150px;
+		width: 100%;
+	}
+
+	.sticky .creationDate {
+		height: 20px;
+		font-size: 9px;
+	}

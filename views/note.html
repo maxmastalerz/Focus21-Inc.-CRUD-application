@@ -1,0 +1,48 @@
+<!--
+Write your own code here
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Express4-boilerplate</title>
+		<link href="css/app.css" rel="stylesheet" media="all">
+		{{> head}}
+	</head>
+	<body>
+
+		<div id="col-L">
+			<h2>Administration:</h2>
+			<form method="POST" action="/note/add">
+				ID:<br>
+				<input type="text/html" readonly editable="false"/><br>
+
+				Note content:<br>
+				<textarea name="noteText"></textarea><br>
+
+				<input type="submit" value="Add Note"/>
+			</form>
+		</div>
+		<div id="col-R">
+			<h2>Notes:</h2>
+			{{#results}}
+				<div class="sticky" id="{{_id}}">
+					<div class="_id">
+						{{_id}}
+
+						<img class="delete" src="https://www.property24.com/Content/images/Optimized/Icons/icon_close_grey.png?50991d"" onclick="deleteNote({{_id}})" />
+						<img class="edit" src="https://learnappmaking.com/wp-content/themes/learnappmaking/img/icons/icon-gear.png" onclick="editNote({{_id}})" />
+					</div>
+					<div class="text">{{text}}</div>
+					<div class="creationDate">
+						{{creationDate}}
+					</div>
+				</div>
+			{{/results}}
+		</div>
+
+		
+
+		<script src="../javascripts/bundle.js"></script>
+	</body>
+</html>
