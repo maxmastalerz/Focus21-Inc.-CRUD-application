@@ -16,7 +16,9 @@ module.exports = {
 		]
 	},
 	output: {
-		filename: 'dist/lib/public/javascripts/bundle.js'
+		filename: 'dist/lib/public/javascripts/bundle.js',
+	    libraryTarget: 'var',
+	    library: 'bundle'
 	}, plugins: [
 		new UglifyJsPlugin()
 	]
