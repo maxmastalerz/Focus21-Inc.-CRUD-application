@@ -10,7 +10,9 @@ To install the project in a local workspace, clone this repository and run the f
 * npm run-script start
 * Visit your browser @ localhost:8080
 
-Below is an overview of the requirements I was assigned to implement:
+You can see the required project details below:
+
+___
 
 Hi Maksymilian,
 
