@@ -1,7 +1,22 @@
 /* Put your super individual styles here if not generated and included elsewhere */
 
-$lightGreen: #b4f241;
-$lightOrange: #ffdd34;
+$lightGreen: #B4F241;
+$lightOrange: #FFDD34;
+$orange: #F1F442;
+$yellow: #F1F442;
+
+$lightTurquoise: #16A085;
+$turquoise: #1ABC9C;
+$darkTurquoise: #109177;
+
+$white: #FFF;
+$lightestGrey: #EEE;
+$lighterGrey: #E8EEEF;
+$lightGrey: #DDD;
+$grey: #8A97A0;
+$darkGrey: #353535;
+$darkestGrey: #444;
+$black: #000;
 
 body {
 	background: url(http://expressjs.com/images/bg.jpg);
@@ -14,11 +29,11 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #eee;
+	background: $lightestGrey;
 	width: 100%;
 	height: 55px;
 	z-index: 100;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $lightGrey;
 }
 
 #logo {
@@ -35,12 +50,12 @@ header {
 		display: block;
 		font: 27px "Helvetica Neue","Open Sans",sans-serif;
 		font-weight: 100;
-		color: #444;
+		color: $darkestGrey;
 		text-decoration: none;
 	}
 
 h2 {
-	color: #353535
+	color: $darkGrey
 }
 
 #col-L {
@@ -48,6 +63,50 @@ h2 {
 	min-width: 200px;
 	width: calc(30% - 100px);
 }
+
+	#noteText {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		background: rgba(255,255,255,.1);
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		margin: 0;
+		outline: 0;
+		padding: 7px;
+		width: 50%;
+		height: 220px;
+		box-sizing: border-box; 
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box; 
+		background-color: $lighterGrey;
+		color: $grey;
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+		margin: 5px 0px 15px 0px;
+	}
+
+	#noteText:hover {
+		background: $lightGrey;
+	}
+
+	input[type="submit"] {
+		position: relative;
+		display: block;
+		padding: 19px 9px 18px 9px;
+		color: $white;
+		background: $turquoise;
+		font-size: 18px;
+		text-align: center;
+		font-style: normal;
+		width: 50%;
+		border: 1px solid $lightTurquoise;
+		border-width: 1px 1px 3px;
+		margin-bottom: 10px;
+	}
+
+	input[type="button"]:hover{
+		background: $darkTurquoise;
+	}
 
 #col-R {
 	width: calc(70% - 100px);
@@ -57,7 +116,7 @@ h2 {
 .sticky {
 	width: 150px;
 	height: 150px;
-	background-color: #f1f442;
+	background-color: $yellow;
 	float: left;
 	padding: 15px 0px 15px 15px;
 	margin: 5px;
@@ -130,7 +189,7 @@ div.topBotomBordersIn a:before, div.topBotomBordersIn a:after {
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #000;
+    background: $black;
     content: "";
     opacity: 0;
     transition: all 0.3s;

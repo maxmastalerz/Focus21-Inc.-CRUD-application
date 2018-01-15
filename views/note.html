@@ -23,11 +23,11 @@ Write your own code here
 
 		<script src="../javascripts/bundle.js"></script>
 		<script type="text/babel">
-			var notesQueryResult = {{{results}}};
+			let notesQueryResult = {{{results}}};
 			displayNotes(JSON.stringify(notesQueryResult));	//Default display of all notes
 
 			function update() {								//Update called when params are in or a note is altered
-				var search = new URL(window.location.href).search;
+				let search = new URL(window.location.href).search;
 				
 				bundle.getNotes(search, function(notes) {
 					displayNotes(notes);
@@ -35,16 +35,16 @@ Write your own code here
 			}
 
 			function addNote(cb) {
-				var inputElement = document.getElementById('noteText');
+				let inputElement = document.getElementById('noteText');
 				bundle.addNote(inputElement.value, cb);
 				inputElement.value = '';
 			}
 
 			function displayNotes(notes) {
-				var notes 	= JSON.parse(notes);
-				var html 	= '';
+				notes 		= JSON.parse(notes);
+				let html 	= '';
 
-				for(var i = 0; i<notes.length; i++) {
+				for(let i = 0; i<notes.length; i++) {
 					html += `
 						<div class="sticky">
 							<div class="_id">
