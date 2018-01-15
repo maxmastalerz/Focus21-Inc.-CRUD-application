@@ -14,7 +14,7 @@ Write your own code here
 		<div id="col-L">
 			<h2>Add a note:</h2>
 			<textarea id="noteText"></textarea><br>
-			<input type="submit" onclick="addNote(); update();" value="Add Note"/>
+			<input type="submit" onclick="addNote(function() { update(); });" value="Add Note"/>
 		</div>
 		<div id="col-R">
 			<h2>Notes:</h2>
@@ -34,9 +34,9 @@ Write your own code here
 				});
 			}
 
-			function addNote() {
+			function addNote(cb) {
 				var inputElement = document.getElementById('noteText');
-				bundle.addNote(inputElement.value);
+				bundle.addNote(inputElement.value, cb);
 				inputElement.value = '';
 			}
 
@@ -50,8 +50,8 @@ Write your own code here
 							<div class="_id">
 								`+notes[i]._id+`
 
-								<img class="delete" src="https://www.property24.com/Content/images/Optimized/Icons/icon_close_grey.png?50991d"" onclick="bundle.deleteNote('`+notes[i]._id+`'); update();" />
-								<img class="edit" src="https://learnappmaking.com/wp-content/themes/learnappmaking/img/icons/icon-gear.png" onclick="bundle.editNote(`+notes[i]._id+`,'`+notes[i].text+`'); update();" />
+								<img class="delete" src="https://www.property24.com/Content/images/Optimized/Icons/icon_close_grey.png?50991d"" onclick="bundle.deleteNote('`+notes[i]._id+`', function() { update(); });" />
+								<img class="edit" src="https://learnappmaking.com/wp-content/themes/learnappmaking/img/icons/icon-gear.png" onclick="bundle.editNote(`+notes[i]._id+`,'`+notes[i].text+`', function() { update(); });" />
 							</div>
 							<div class="text">`+notes[i].text+`</div>
 							<div class="creationDate">
