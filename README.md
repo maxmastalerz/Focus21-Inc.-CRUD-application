@@ -1,7 +1,7 @@
 Note Manager
 ============
 This project is an assignment completed as part of the application process to Focus21 Inc.
-The live version of the application can be found at https://notemanager.herokuapp.com/
+The live version of the application can be found at https://crud-notes.herokuapp.com/
 
 To install the project in a local workspace, clone this repository and run the following commands:
 
